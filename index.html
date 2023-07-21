@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/style.css">
+    <script src="https://kit.fontawesome.com/7fd578f29d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Google Keep</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="title">
+            <div class="sidebar">
+                <button><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="title-text">
+                <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="logo">
+                <h1>Keep</h1>
+            </div>
+        </div>
+
+        <!-- <div class="search-bar">
+            <input type="search">
+        </div> -->
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </li>
+                <li>
+                    <button id="view">
+                        <i class="fa-solid fa-list-ul"></i>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="profile">
+                <div class="options">
+                    <button>
+                        <svg fill="#000" class="gb_h" focusable="false" viewBox="0 0 24 24">
+                            <path
+                                d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="img">
+                    <img src="https://lh3.googleusercontent.com/a/AAcHTtdkxs7qXp4pzwB1q6rlKwx35uAJP3hp7IP4fwTAAGdxa2o=s360-c-no"
+                        alt="profile">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="note-input">
+        <div class="input-title">
+            <input type="text" id="input-title" placeholder="Title">
+        </div>
+        <div class="input-description" id="input-description-div">
+            <textarea id="input-description" name="text" id="" cols="30" rows="10"
+                placeholder="Take a note..."></textarea>
+            <div class="add-note">
+                <button id="add-note"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="note-output">
+        <div class="notes">
+           
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

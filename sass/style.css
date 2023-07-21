@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.medium {
+  grid-template-columns: 1fr 1fr !important;
+}
+.medium .note {
+  max-width: 95% !important;
+  width: 100%;
+}
+
+.full {
+  grid-template-columns: 1fr !important;
+}
+.full .note {
+  max-width: 100% !important;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .title {
+  display: flex;
+  align-items: center;
+}
+.header .title .sidebar button {
+  background: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transition: background 0.4s ease;
+}
+.header .title .sidebar button i {
+  font-size: 20px;
+}
+.header .title .sidebar button:hover {
+  background: lightgrey;
+}
+.header .title .title-text {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.header .search-bar {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .search-bar input {
+  padding: 10px 10px;
+  width: 100%;
+}
+.header .menu {
+  display: flex;
+  align-items: center;
+}
+.header .menu ul {
+  display: flex;
+}
+.header .menu ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+.header .menu ul li button {
+  background: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transition: background 0.4s ease;
+}
+.header .menu ul li button i {
+  font-size: 20px;
+}
+.header .menu ul li button:hover {
+  background: lightgrey;
+}
+.header .menu .profile {
+  display: flex;
+  margin-left: 20px;
+}
+.header .menu .profile .img img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+
+.note-input {
+  max-width: 600px;
+  width: 100%;
+  margin: 50px auto;
+}
+.note-input .input-title {
+  width: 100%;
+  height: 50px;
+  box-shadow: 4px 4px 1px #000;
+}
+.note-input .input-title input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 10px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+}
+.note-input .input-description {
+  width: 100%;
+  height: 100px;
+  display: none;
+  position: relative;
+  box-shadow: 4px 4px 1px #000;
+}
+.note-input .input-description textarea {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 14px;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+}
+.note-input .input-description .add-note {
+  position: absolute;
+  right: -15px;
+  bottom: -10px;
+}
+.note-input .input-description .add-note button {
+  background: #fbbc04;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.note-output {
+  width: 100%;
+  min-height: 100%;
+  padding: 0 0 50px 0;
+}
+.note-output .notes {
+  max-width: 90%;
+  width: 100%;
+  min-height: 100%;
+  margin: auto auto;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+.note-output .notes .note {
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 150px;
+  margin: 10px;
+  border: 2px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.note-output .notes .note .title {
+  width: 100%;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.note-output .notes .note .description {
+  width: 100%;
+  word-wrap: break-word;
+  font-weight: normal;
+}
+.note-output .notes .note .options {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  position: relative;
+}
+.note-output .notes .note .options .note-bg button {
+  background: none;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transition: background 0.4s ease;
+}
+.note-output .notes .note .options .note-bg button:hover {
+  background: lightgrey;
+}
+.note-output .notes .note .options .note-delete button {
+  background: none;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transition: background 0.4s ease;
+}
+.note-output .notes .note .options .note-delete button i {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.note-output .notes .note .options .note-delete button:hover {
+  background: lightgrey;
+}
+.note-output .notes .note .options .bg {
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 40px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.note-output .notes .note .options .bg .bg-div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.note-output .notes .note .options .bg .bg-div:nth-child(1) {
+  background: rebeccapurple;
+}
+.note-output .notes .note .options .bg .bg-div:nth-child(2) {
+  background: lightgreen;
+}
+.note-output .notes .note .options .bg .bg-div:nth-child(3) {
+  background: #e8eaed;
+}
+.note-output .notes .note .options .bg .bg-div:nth-child(4) {
+  background: #fdcfe8;
+}
+.note-output .notes .note .options .bg .bg-div:nth-child(5) {
+  background: #a7ffeb;
+}
+.note-output .notes .note .options .bg .bg-div:nth-child(6) {
+  background: #fbbc04;
+}
+.note-output .notes .note .options .bg .bg-div:nth-child(7) {
+  background: #f28b82;
+}/*# sourceMappingURL=style.css.map */
