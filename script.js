@@ -53,7 +53,6 @@ addNote.addEventListener("click", (e) => {
         <div class="bg-div"></div>
         <div class="bg-div"></div>
     </div>
-
     `;
 
     noteDiv.appendChild(noteTitle);
@@ -66,22 +65,45 @@ addNote.addEventListener("click", (e) => {
     description.value = " ";
     descriptionDiv.classList.remove("d-block");
 
-    // deleting note
+    // deleting note functionality
     const deleteNotes = document.querySelectorAll(".note");
     deleteNotes.forEach((note) => {
       note.addEventListener("click", (e) => {
         if (e.target.classList[1] === "fa-trash") {
           note.remove();
         }
+      });
+    });
+
+    // bg Chnage note functionality
+    var count = 0;
+    const bgChange = document.querySelectorAll(".note");
+    bgChange.forEach((bg) => {
+      bg.addEventListener("click", (e) => {
         if (e.target.classList[1] === "fa-palette") {
-          console.log("bgcolor");
+          const bgColors = [
+            "lightgreen",
+            "#e8eaed",
+            "#fdcfe8",
+            "#a7ffeb",
+            "#fbbc04",
+            "#f28b82",
+          ];
+
+          bg.style.color = "#000";
+          bg.style.backgroundColor = bgColors[count];
+          count = count + 1;
+          if (count >= bgColors.length) {
+            count = 0;
+          }
         }
       });
     });
   }
 });
 
+// change view functionality
 const view = document.querySelector("#view");
-view.addEventListener("click", (e) => {
+view.addEventListener("click", () => {
   notes.classList.toggle("medium");
 });

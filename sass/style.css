@@ -16,6 +16,17 @@ body {
   display: flex !important;
 }
 
+.white {
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.white:hover {
+  color: #000;
+  background: none !important;
+}
+
 .medium {
   grid-template-columns: 1fr 1fr !important;
 }
@@ -236,6 +247,13 @@ body {
 .note-output .notes .note .options .note-bg button:hover {
   background: lightgrey;
 }
+.note-output .notes .note .options .note-bg button i {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .note-output .notes .note .options .note-delete button {
   background: none;
   height: 30px;
@@ -265,7 +283,7 @@ body {
   transform: translate(-50%, -50%);
   width: 300px;
   height: 40px;
-  border: 2px solid #eee;
+  border: 2px solid lightgrey;
   border-radius: 10px;
   display: none;
   justify-content: space-between;
